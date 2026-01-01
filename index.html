@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prity' Beauty Parlour</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Prity' Beauty Parlour</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner Slider -->
+  <section class="hero-slider">
+    <div class="slides">
+      <img src="https://images.pexels.com/photos/4050312/pexels-photo-4050312.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Beauty 1" class="slide active">
+      <img src="https://images.pexels.com/photos/3768519/pexels-photo-3768519.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Beauty 2" class="slide">
+      <img src="https://images.pexels.com/photos/4626800/pexels-photo-4626800.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Beauty 3" class="slide">
+      <img src="https://images.pexels.com/photos/3771082/pexels-photo-3771082.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Beauty 4" class="slide">
+    </div>
+    <div class="hero-text">
+      <h1>Luxury Beauty • Bridal Elegance • Timeless Glow</h1>
+      <a href="https://wa.me/6207344063" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3831643/pexels-photo-3831643.jpeg?auto=compress&cs=tinysrgb&h=350&w=500" alt="Bridal Makeup">
+        <h3>Bridal Makeup</h3>
+        <p>Perfect looks for your special day. Elegant and timeless styles.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3771068/pexels-photo-3771068.jpeg?auto=compress&cs=tinysrgb&h=350&w=500" alt="Party Makeup">
+        <h3>Party & Event Makeup</h3>
+        <p>Glamorous transformations for any occasion or celebration.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&h=350&w=500" alt="Skincare">
+        <h3>Skincare & Facials</h3>
+        <p>Revitalize your skin with professional facials and treatments.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/4755072/pexels-photo-4755072.jpeg?auto=compress&cs=tinysrgb&h=350&w=500" alt="Hair Styling">
+        <h3>Hair Styling</h3>
+        <p>Trendy cuts, styling, and hair care to complete your look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Prity' Beauty Parlour is a luxury beauty and bridal studio based in Katihar, Bihar. We specialize in bringing elegance, style, and timeless beauty to every client. Our professional team uses top-quality products to ensure you feel confident and radiant for every occasion.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Location:</strong> Durgasthan, 1 No Colony, Kalibari, Tiarpara, Katihar, Bihar 854105</p>
+      <p><strong>Phone:</strong> <a href="tel:6207344063">6207344063</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/6207344063" target="_blank">Chat Now</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pritys_makeover_salon/" target="_blank">@pritys_makeover_salon</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/smily.prity.90/" target="_blank">Prity' Beauty Parlour</a></p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.825164781293!2d87.5800279!3d25.5441933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39faa9e65c4f1aa3%3A0x66407559804cbb7a!2sPrity%27+Makeup+Artist+(Beauty+Parlour)!5e0!3m2!1sen!2sin!4v1704193671281!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Prity' Beauty Parlour. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS Slider -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function nextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+    setInterval(nextSlide, 4000);
+  </script>
+</body>
+</html>
