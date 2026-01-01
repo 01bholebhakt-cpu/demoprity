@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - Prity' Beauty Parlour</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Prity' Beauty Parlour</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <h2>Book Your Appointment</h2>
+    <p>Fill in your details and get your appointment instantly via WhatsApp!</p>
+
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email (optional)">
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Bridal Makeup">Bridal Makeup</option>
+        <option value="Party Makeup">Party & Event Makeup</option>
+        <option value="Skincare & Facials">Skincare & Facials</option>
+        <option value="Hair Styling">Hair Styling</option>
+      </select>
+      <input type="date" name="date" required>
+      <textarea name="notes" placeholder="Additional Notes (optional)"></textarea>
+      <button type="submit" class="btn">Book via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Prity' Beauty Parlour. All Rights Reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Form Script -->
+  <script>
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.name.value;
+      const phone = form.phone.value;
+      const email = form.email.value || 'Not Provided';
+      const service = form.service.value;
+      const date = form.date.value;
+      const notes = form.notes.value || 'None';
+
+      const msg = `Hello! I want to book an appointment at Prity' Beauty Parlour.%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AService: ${service}%0ADate: ${date}%0ANotes: ${notes}`;
+      const waLink = `https://wa.me/6207344063?text=${msg}`;
+      window.open(waLink, '_blank');
+
+      alert('Redirecting to WhatsApp to confirm your booking!');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
